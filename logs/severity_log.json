@@ -102,5 +102,31 @@
             "lying_person": "No"
         },
         "severity_score": 5
+    },
+    {
+        "session_id": 8,
+        "start_time": "2025-04-18 16:03:09",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 9,
+        "start_time": "2025-04-18 16:13:20",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
     }
 ]

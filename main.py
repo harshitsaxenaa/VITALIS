@@ -26,11 +26,12 @@ pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 fall_threshold = 1
 tracker = Tracker()
 
-cap = cv2.VideoCapture("data/test_video5.mp4")
+cap = cv2.VideoCapture("data/test_videof.mp4")
 if not cap.isOpened():
     print("Error: Video not found or can't be opened.")
     exit()
 
+# Start new log session
 session_id = start_new_session()
 
 detected_once = {}
@@ -106,11 +107,14 @@ while cap.isOpened():
 cap.release()
 cv2.destroyAllWindows()
 
+# Final sticky logic: if detected at least once, mark as Yes
 for label, count in detected_once.items():
     if count > 0:
         update_detection(session_id, label)
 
+# End session and calculate final severity
 end_session(session_id)
+
 
 import json
 from datetime import datetime
@@ -127,4 +131,3 @@ def update_accident_db(labels, severity):
         json.dump(accident_entry, f, indent=2)
 
 update_accident_db(final_labels, severity_score)
-

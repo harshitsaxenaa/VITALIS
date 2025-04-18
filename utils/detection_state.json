@@ -1,7 +1,7 @@
 {
     "fire": "Yes",
     "smoke": "No",
-    "blood": "Yes",
-    "accident": "No",
-    "lying_person": "No"
+    "blood": "No",
+    "accident": "Yes",
+    "lying_person": "Yes"
 }
