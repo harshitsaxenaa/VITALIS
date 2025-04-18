@@ -26,7 +26,7 @@ pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 fall_threshold = 1
 tracker = Tracker()
 
-cap = cv2.VideoCapture("data/test_video.mp4")
+cap = cv2.VideoCapture("data/test_video5.mp4")
 if not cap.isOpened():
     print("Error: Video not found or can't be opened.")
     exit()

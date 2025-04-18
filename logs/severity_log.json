@@ -1,0 +1,106 @@
+[
+    {
+        "session_id": 0,
+        "start_time": "2025-04-17 23:47:39",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "Yes"
+        },
+        "severity_score": 6
+    },
+    {
+        "session_id": 1,
+        "start_time": "2025-04-18 00:29:41",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "Yes"
+        },
+        "severity_score": 6
+    },
+    {
+        "session_id": 2,
+        "start_time": "2025-04-18 01:36:10",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "Yes"
+        },
+        "severity_score": 6
+    },
+    {
+        "session_id": 3,
+        "start_time": "2025-04-18 02:37:34",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "Yes"
+        },
+        "severity_score": 6
+    },
+    {
+        "session_id": 4,
+        "start_time": "2025-04-18 11:22:40",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 5,
+        "start_time": "2025-04-18 12:22:11",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "No"
+        },
+        "severity_score": 3
+    },
+    {
+        "session_id": 6,
+        "start_time": "2025-04-18 13:09:40",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "No"
+        },
+        "severity_score": 3
+    },
+    {
+        "session_id": 7,
+        "start_time": "2025-04-18 14:03:57",
+        "status": "completed",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 5
+    }
+]
