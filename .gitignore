@@ -1,0 +1,43 @@
+# Exclude virtual environments
+envv/
+env/
+.env
+.envv
+
+# Exclude Python compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Ignore package files
+__pycache__/
+.env
+.envrc
+
+# Exclude large file types
+*.dll
+*.exe
+*.lib
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore metadata for streamlit deployments
+.streamlit/
+
+# Ignore node_modules (if applicable)
+node_modules/
+
+# Add custom ignores here
