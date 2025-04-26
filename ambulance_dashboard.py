@@ -4,7 +4,7 @@ import json
 
 st.set_page_config(page_title="Ambulance Dashboard", layout="centered")
 
-#Password
+# Password protection
 def check_password():
     if "authenticated" not in st.session_state:
         st.session_state.authenticated = False
@@ -18,43 +18,59 @@ def check_password():
                     st.session_state.authenticated = True
                 else:
                     st.error("Incorrect password")
-                    st.stop()  
+                    st.stop()
             else:
-                st.stop() 
+                st.stop()
 
-check_password() 
-
+check_password()
 
 ACCIDENT_DB = 'logs/severity_log.json'
 ROUTE_DB = 'logs/routes_db.json'
 
-st_autorefresh(interval=5000, key="ambulance_refresh")
+# Auto-refresh every 5 sec
+st_autorefresh(interval=4000, key="ambulance_refresh")
 
 st.title("🚨 Ambulance Alert for Nearby Accidents")
+
+# Load latest accident data
 try:
     with open(ACCIDENT_DB, 'r') as f:
         data = json.load(f)
         if not data:
             st.warning("No recent accident data available.")
             st.stop()
-        latest = data[-1]  # Most recent entry
+        latest = data[-1]
 except:
     st.error("Error loading accident data.")
     st.stop()
 
+# Display accident details
 start_time = latest.get('start_time', 'N/A')
 severity = latest.get('severity_score', 0)
 status = latest.get('status', '').lower()
 location = "ABC"  # Placeholder
 
-# Display info
 st.subheader("⚠️ Accident Detected Nearby")
 st.write(f"**Date & Time:** {start_time}")
 st.write(f"**Location:** {location}")
 st.write(f"**Severity Score:** {severity}")
-if status == "ambulance enroute":
+
+# Show Accept button if not already accepted
+if status != "ambulance enroute":
+    if st.button("🚑 Accept Ambulance Request"):
+        try:
+            latest['status'] = 'ambulance enroute'
+            data[-1] = latest
+            with open(ACCIDENT_DB, 'w') as f:
+                json.dump(data, f, indent=4)
+            st.success("🚑 Request Accepted. Ambulance is now enroute!")
+            st.experimental_rerun()
+        except:
+            st.error("")
+else:
     st.success("✅ Ambulance has already accepted the request and is enroute.")
 
+    # Show route details
     try:
         with open(ROUTE_DB) as f:
             routes = json.load(f)
@@ -71,19 +87,16 @@ if status == "ambulance enroute":
             st.warning("No route info available for the location.")
     except:
         st.error("Error loading route data.")
-else:
-    
-    if st.button("🚑 Accept Ambulance Request"):
+
+    # Reset button to enable Accept button again
+    st.markdown("---")
+    if st.button("🔁 Reset Request"):
         try:
-            with open(ACCIDENT_DB, "r") as f:
-                accident_data = json.load(f)
-
-            accident_data[-1]["status"] = "ambulance enroute"
-
-            with open(ACCIDENT_DB, "w") as f:
-                json.dump(accident_data, f, indent=4)
-
-            st.success("🚑 Request Accepted. Ambulance is now enroute!")
+            latest['status'] = 'pending'
+            data[-1] = latest
+            with open(ACCIDENT_DB, 'w') as f:
+                json.dump(data, f, indent=4)
+            st.success("Request reset to pending.")
             st.experimental_rerun()
         except:
-            st.error("Error updating accident status.")
+            st.error("")

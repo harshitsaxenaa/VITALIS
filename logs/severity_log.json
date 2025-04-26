@@ -128,5 +128,314 @@
             "lying_person": "Yes"
         },
         "severity_score": 7
+    },
+    {
+        "session_id": 10,
+        "start_time": "2025-04-18 16:51:49",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 11,
+        "start_time": "2025-04-18 17:27:02",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0
+    },
+    {
+        "session_id": 12,
+        "start_time": "2025-04-18 17:36:02",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 13,
+        "start_time": "2025-04-18 17:45:16",
+        "status": "pending",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 14,
+        "start_time": "2025-04-20 01:46:22",
+        "status": "completed",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 15,
+        "start_time": "2025-04-25 17:50:49",
+        "status": "pending",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0
+    },
+    {
+        "session_id": 16,
+        "start_time": "2025-04-25 19:54:45",
+        "status": "completed",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 17,
+        "start_time": "2025-04-25 20:13:34",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "Yes"
+        },
+        "severity_score": 7
+    },
+    {
+        "session_id": 18,
+        "start_time": "2025-04-26 07:25:15",
+        "status": "ambulance enroute",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0
+    },
+    {
+        "session_id": 19,
+        "start_time": "2025-04-26 07:50:39",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "Yes",
+            "lying_person": "No"
+        },
+        "severity_score": 3,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 20,
+        "start_time": "2025-04-26 07:52:27",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 21,
+        "start_time": "2025-04-26 08:01:06",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 22,
+        "start_time": "2025-04-26 08:02:44",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 23,
+        "start_time": "2025-04-26 08:03:29",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 24,
+        "start_time": "2025-04-26 08:08:04",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 25,
+        "start_time": "2025-04-26 08:09:24",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 26,
+        "start_time": "2025-04-26 08:14:48",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 28.6139,
+        "lon": 77.209,
+        "location": "New Delhi, India"
+    },
+    {
+        "session_id": 27,
+        "start_time": "2025-04-26 08:19:30",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 30.3244,
+        "lon": 78.0339,
+        "location": "Dehra D\u016bn"
+    },
+    {
+        "session_id": 28,
+        "start_time": "2025-04-26 08:26:10",
+        "status": "completed",
+        "detection_state": {
+            "fire": "No",
+            "smoke": "No",
+            "blood": "No",
+            "accident": "No",
+            "lying_person": "No"
+        },
+        "severity_score": 0,
+        "lat": 30.3244,
+        "lon": 78.0339,
+        "location": "Dehra D\u016bn"
+    },
+    {
+        "session_id": 29,
+        "start_time": "2025-04-26 08:54:36",
+        "status": "completed",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "Yes"
+        },
+        "severity_score": 6,
+        "lat": 30.3244,
+        "lon": 78.0339,
+        "location": "Dehra D\u016bn"
+    },
+    {
+        "session_id": 30,
+        "start_time": "2025-04-26 08:54:50",
+        "status": "completed",
+        "detection_state": {
+            "fire": "Yes",
+            "smoke": "No",
+            "blood": "Yes",
+            "accident": "No",
+            "lying_person": "Yes"
+        },
+        "severity_score": 6,
+        "lat": 30.3244,
+        "lon": 78.0339,
+        "location": "Dehra D\u016bn"
     }
 ]

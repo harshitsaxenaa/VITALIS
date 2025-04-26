@@ -6,7 +6,8 @@ import mediapipe as mp
 import cvzone
 import os
 from utils.tracker import Tracker
-from utils.log_manager import start_new_session, update_detection, end_session
+from utils.log_manager import start_new_session, update_detection, end_session, update_location
+import geocoder 
 
 pygame.init()
 pygame.mixer.music.load("utils/alarm.wav")
@@ -115,19 +116,28 @@ for label, count in detected_once.items():
 # End session and calculate final severity
 end_session(session_id)
 
+g = geocoder.ip('me')
+lat, lon = g.latlng if g.ok else (None, None)
+location = g.city or "Unknown"
 
 import json
 from datetime import datetime
-
 def update_accident_db(labels, severity):
     accident_entry = {
         "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "location": "ABC",  # We'll update this later
+        "location": location,  # We'll update this later
         "severity": severity,
         "labels": labels,
-        "ambulance_enroute": False
+        "ambulance_enroute": False,
+        "lat": lat,
+        "lon": lon,
+        "severity": severity,
     }
     with open("logs/accident_db.json", "w") as f:
         json.dump(accident_entry, f, indent=2)
 
+update_location(session_id, lat, lon, location)
 update_accident_db(final_labels, severity_score)
+
+
+

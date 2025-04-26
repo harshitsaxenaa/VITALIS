@@ -32,7 +32,10 @@ def start_new_session():
         'start_time': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         'status': 'running',
         'detection_state': detection_state,
-        'severity_score': 0
+        'severity_score': 0,
+        'lat': 28.6139,  # default New Delhi
+        'lon': 77.2090,
+        'location': "New Delhi, India"
     }
 
     logs.append(new_session)
@@ -53,6 +56,15 @@ def update_detection(session_id, label):
         session['severity_score'] = calculate_severity(session['detection_state'])
         logs[session_id] = session
         save_json(LOG_FILE, logs)
+
+def update_location(session_id, lat, lon, location):
+    logs = load_json(LOG_FILE, [])
+    
+    logs[session_id]['lat'] = lat
+    logs[session_id]['lon'] = lon
+    logs[session_id]['location'] = location
+    save_json(LOG_FILE, logs)
+
 
 def calculate_severity(state):
     weights = {

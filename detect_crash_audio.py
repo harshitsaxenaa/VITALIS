@@ -5,6 +5,8 @@ import librosa
 
 CRASH_LABELS = ["Car crash", "Tire squeal", "Skidding", "Siren", "Glass"]
 
+
+
 yamnet_model = hub.load('https://tfhub.dev/google/yamnet/1')
 def load_class_names():
     path = tf.keras.utils.get_file(
